@@ -1,0 +1,66 @@
+DATOS
+------ 
+new Paises(34, "España", "español")
+new Paises(33, "Francia", "frances")
+new Paises(49, "Alemania", "aleman")
+new Paises(44, "Reino Unido", "ingles")
+new Paises(54, "Argentina", "español")
+new Paises(1, "Estados Unidos", "ingles")
+new Paises(1500,"Atlantis", "antiguo")
+new Paises(1230,"Lyonesse", "ingles")
+-----------------------------------------------------
+MYSQL
+1º Crear Base de Datos (Paises)
+2º Crear Tabla en la base de datos con sus campos (T:Paises; C1:prefijo(int 4); C2:nombre(varchar 20); C3:idioma(varchar 20);
+3º Insertar valores:
+INSERT INTO `paises` (`prefijo`, `nombre`, `idioma`) VALUES ('34', 'España', 'español'), ('33', 'Francia', 'frances'), 
+('49', 'Alemania', 'aleman'), ('44', 'Reino Unido', 'ingles'), ('54', 'Argentina', 'español'), 
+('1', 'Estados Unidos', 'ingles'), ('1500', 'Atlantis', 'antiguo'), ('1230', 'Lyonesse', 'ingles');
+
+
+SELECT * FROM paises WHERE idioma = 'español'		España y Argentina
+
+-----
+"*** Lista de Paises ***"
+SELECT * FROM paises
+
+"*** Lista de Paises cuyo nombre empieza por A o E***"
+SELECT * FROM paises WHERE nombre LIKE "A%" 
+UNION 
+SELECT * FROM paises WHERE nombre LIKE "E%"
+
+"*** Número de Paises ***"
+SELECT COUNT(*) FROM paises
+
+"*** Paises con el prefijo mayor a 40 y su idioma sea el ingles ***"
+SELECT * FROM paises WHERE prefijo > 40 AND idioma = "ingles"
+
+*** Mostrar los 2 primeros Paises ***"
+SELECT * FROM paises LIMIT 2
+
+"*** Pais con el prefijo más pequeño ***"
+SELECT * FROM paises ORDER BY prefijo ASC LIMIT 1	Del más pequeño al más grande
+
+"*** Pais con el prefijo más grande ***"
+SELECT * FROM paises ORDER BY prefijo DESC LIMIT 1	Del más grande al más pequeño
+
+"*** Mostrar el primer Pais ***"
+SELECT * FROM paises LIMIT 1
+
+"*** Mostrar el último Pais ***"
+????????????????????????????????
+
+"*** Paises cuyo nombre contiene una i ***"
+SELECT * FROM paises WHERE nombre LIKE "%i%"
+
+"*** Paises cuyo nombre tenga más de 8 carácteres ***"
+SELECT * FROM paises WHERE CHAR_LENGTH(nombre)>8
+
+"*** Paises cuyo nombre tenga 8 carácteres ***"
+SELECT * FROM paises WHERE CHAR_LENGTH(nombre)=8
+
+-----------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------

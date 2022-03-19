@@ -1,0 +1,22 @@
+Con un csv
+1 Crear un directorio.
+2 crear un archivo.
+3 leer un archivo distinto.
+4 escribir en el archivo creado lo leido en el otro archivo.
+5 Almacenar el contenido en objetos, mostrarlos.
+6 Hacer filtros con la info de los objetos.
+7 crear y escribir la información filtrada de los objetos en un archivo nuevo.
+-----------------------------------------------------------------------------------
+Como propuesta podríamos coger un csv (Transformarlo en XML y luego trabajar con ese XML 
+con alguno de los parsers vistos en clase y utilizando XPATH) comunal y trabajar con él 
+todos y así practicamos para el examen y vemos diferentes soluciones y diferentes formas de pensar,
+si alguien quiere podemos ver que CSV esta guay y que podríamos hacer con él.
+https://datos.gob.es/es/catalogo/ea0010587-comunidades-autonomas-por-grupos-especiales-ipc-identificador-api-t25-p138-pond01-l0-02004-px
+
+Por ejemplo yo había cogido este csv y tenía pensado que un usuario escoja una CC.AA y que 
+nos muestre todos los datos por el periodo, luego hacer una operación para contar, 
+cuantos elementos se han encontrado, cual es el total más alto y cual es el más bajo, 
+una vez realizado esto, exportarlo en un XML y hacer operaciones CRUD para jugar con él y 
+luego hacer operaciones XPATH con ese XML
+----------------------------------------------------------------------------------------------------
+sorted(Comparator.reverseOrder())
